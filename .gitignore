@@ -1,0 +1,10 @@
+# Security — never commit real keys
+admin/js/config.js
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.code-workspace

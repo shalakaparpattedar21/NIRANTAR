@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIRANTAR — Recovery is a Continuous Process</title>
+<meta name="description" content="NIRANTAR Physiotherapy — Evidence-based, patient-first physiotherapy care. Book appointments and track your recovery online.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="session-loader" style="position:fixed;inset:0;z-index:99999;background:#f6f5f1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+  <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;letter-spacing:0.1em;color:#1F6F6B">NIRANTAR</div>
+  <div style="width:36px;height:36px;border:3px solid #e5e2dc;border-top-color:#2A9D8F;border-radius:50%;animation:_spin 0.8s linear infinite"></div>
+  <style>@keyframes _spin{to{transform:rotate(360deg)}}</style>
+</div>
+
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#" onclick="showPage('page-main');return false;">
+      <span class="nav-brand-name">NIRANTAR</span>
+      <span class="nav-brand-sub">Physiotherapy</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#knowledge">Learn</a>
+      <a href="#services">Services</a>
+      <a href="#founder">Contact</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <div class="nav-actions" id="nav-auth">
+      <button class="btn btn-outline btn-sm" onclick="openLogin()">Log In</button>
+      <button class="btn btn-primary btn-sm" onclick="openSignup()">Sign Up</button>
+    </div>
+    <div class="nav-actions hidden" id="nav-user">
+      <span class="nav-user-chip" id="nav-username"></span>
+      <button class="btn btn-ghost btn-sm" onclick="openBooking()">Book Appointment</button>
+      <button class="btn btn-primary btn-sm" onclick="openDashboard()">Dashboard</button>
+      <button class="btn btn-outline btn-sm" onclick="logout()">Log Out</button>
+    </div>
+  </div>
+</nav>
+<div id="page-main">
+
+<section class="hero" id="hero">
+  <div class="hero-inner">
+
+    <div class="hero-content">
+
+      <span class="hero-tag">
+        RECOVERY • MOVEMENT • WELLNESS
+      </span>
+
+      <h1 class="hero-title">
+        <em>NIRANTAR</em>
+      </h1>
+
+      <h2 class="hero-heading">
+        Your Home Physio Partner with every step of healing.
+      </h2>
+
+      <p class="founder-title-tag">
+        " Recovery is continuous progress "
+      </p>
+
+      <div class="hero-features">
+        <span>✓ Home Visits</span>
+        <span>✓ Guided Recovery</span>
+        <span>✓ Expert Physiotherapy</span>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" onclick="openBooking()">
+          Book Appointment
+        </button>
+
+        <button
+          class="btn btn-outline btn-lg"
+          onclick="document.getElementById('knowledge').scrollIntoView({behavior:'smooth'})"
+        >
+          Learn Physiotherapy
+        </button>
+        <button
+  class="btn btn-outline btn-lg"
+  onclick="window.location.href='tel:+918657693396'"
+>
+  Contact
+</button
+
+      <div class="hero-stats">
+
+        <div class="stat">
+          <strong>Thane</strong>
+          <span>Home Visit Services</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="about section-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Healing Through Movement &amp; Expert Care</h2>
+        <p>NIRANTAR — meaning <em>continuous</em> in Sanskrit — was founded on the belief that healing is not a one-time event but an ongoing journey. We combine modern physiotherapy techniques with a deep understanding of each patient's unique body and lifestyle.</p>
+        <p style="margin-bottom:2rem">Our Home Visit Physiotherapy Services bring expert rehabilitation directly to your doorstep, offering personalised treatment for post surgical recovery, neurological conditions, elderly care, sports injuries, chronic pain, and mobility challenges. Each session is carefully tailored to the patient’s needs, ensuring professional, compassionate, and continuous care in the comfort and safety of home.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Explore Our Services</button>
+      </div>
+      <div class="about-showcase">
+
+  <div class="showcase-slider">
+
+  <img class="slide active"src="https://images.pexels.com/photos/30483061/pexels-photo-30483061.jpeg?auto=compress&cs=tinysrgb&w=1600"alt="Physical Therapy">
+<img class="slide"src="https://images.pexels.com/photos/20860612/pexels-photo-20860612.jpeg?auto=compress&cs=tinysrgb&w=1600"alt="Foot Therapy">
+<img class="slide"src="https://images.pexels.com/photos/7339492/pexels-photo-7339492.jpeg?auto=compress&cs=tinysrgb&w=1600"alt="Knee Taping">
+<img class="slide"src="https://images.pexels.com/photos/27730433/pexels-photo-27730433.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Massage Therapy">
+<img class="slide"src="https://images.pexels.com/photos/30483049/pexels-photo-30483049.jpeg?auto=compress&cs=tinysrgb&w=1600"alt="Knee Physiotherapy">
+</div>
+
+  <div class="showcase-overlay">
+    <h3>Personalised Recovery Journey</h3>
+    <p>
+      Advanced rehabilitation, movement therapy,
+      pain management, and home physiotherapy
+      tailored to every patient.
+    </p>
+  </div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="knowledge section-pad" id="knowledge">
+  <div class="container">
+    <div class="center" style="margin-bottom:2.5rem">
+      <h2 class="section-title">Learn About Physiotherapy</h2>
+      <p class="section-intro">Expand your understanding of physiotherapy, common conditions, and how to take charge of your health and recovery.</p>
+    </div>
+    <div class="tabs-wrap">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('physio',this)">What is Physiotherapy?</button>
+        <button class="tab-btn" onclick="switchTab('types',this)">Types of Therapy</button>
+        <button class="tab-btn" onclick="switchTab('injuries',this)">Common Injuries</button>
+        <button class="tab-btn" onclick="switchTab('exercises',this)">Exercises &amp; Rehab</button>
+        <button class="tab-btn" onclick="switchTab('posture',this)">Posture &amp; Lifestyle</button>
+      </div>
+    </div>
+    <div class="tab-panel active" id="tab-physio"><div class="k-grid">
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop"alt="Physiotherapy"><h4>Definition &amp; Scope</h4><p>Physiotherapy is a healthcare discipline using physical methods to restore, maintain, and maximise movement and functional ability.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">It encompasses assessment, diagnosis, and treatment of injury, disease, or disability. Physiotherapists work across hospitals, private clinics, sports settings, and community care to help patients of all ages regain independence and quality of life.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1200&auto=format&fit=crop" alt="Therapy Session"><h4>How It Works</h4><p>Physiotherapy works by addressing the root cause of pain through targeted movement, manual therapy, and rehabilitation.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Techniques stimulate the body's natural healing processes. Exercise strengthens weakened muscles, manual therapy improves joint mobility, and patient education helps manage conditions for the long term.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/13907447/pexels-photo-13907447.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Patient Care"><h4>Who Can Benefit?</h4><p>Anyone experiencing pain, movement limitations, or recovering from surgery or injury can benefit from physiotherapy.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">From athletes recovering from sports injuries to elderly patients managing arthritis, from stroke survivors relearning movement to office workers with chronic back pain — physiotherapy offers evidence-based solutions for diverse needs.</div></div>
+     
+    </div></div>
+    <div class="tab-panel" id="tab-types"><div class="k-grid">
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/5793792/pexels-photo-5793792.jpeg?auto=compress&cs=tinysrgb&w=1200"  alt="Manual Therapy"><h4>Manual Therapy</h4><p>Hands-on techniques including joint mobilisation, manipulation, and soft tissue release to reduce pain and restore movement.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Manual therapy targets restricted joints and tight muscles directly. Therapists use precise forces to improve joint mechanics, reduce muscle tension, and modulate pain signals — often providing immediate relief.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/13185359/pexels-photo-13185359.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Electrotherapy"><h4>Electrotherapy</h4><p>TENS, ultrasound, and laser therapy to reduce pain, inflammation, and stimulate tissue healing at a cellular level.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Electrical and energy-based modalities accelerate the healing process. Particularly useful in the early stages of injury management when active exercise may be too painful to perform safely.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/6094075/pexels-photo-6094075.jpeg?auto=compress&cs=tinysrgb&w=1200" " alt="Dry Needling"><h4>Dry Needling</h4><p>Fine needles inserted into trigger points to release muscle tension and relieve chronic pain patterns.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Unlike acupuncture, dry needling targets myofascial trigger points based on musculoskeletal anatomy. It can rapidly deactivate painful knots, restore range of motion, and reduce referred pain patterns in chronic conditions.</div></div>
+    </div></div>
+    <div class="tab-panel" id="tab-injuries"><div class="k-grid">
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/4226207/pexels-photo-4226207.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Lower Back Pain"><h4>Lower Back Pain</h4><p>The most common musculoskeletal complaint, affecting up to 80% of adults at some point in their lives.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Causes range from muscle strain and disc herniation to poor posture and sedentary lifestyle. Physiotherapy addresses the root cause through core strengthening, postural correction, manual therapy, and ergonomic education.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/20860607/pexels-photo-20860607.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Knee Rehabilitation"><h4>Knee Injuries</h4><p>ACL tears, meniscal damage, patellofemoral pain, and osteoarthritis are among the most common knee conditions.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Knee rehabilitation focuses on quadriceps and hamstring strengthening, proprioception training, and biomechanical correction. Post-surgical rehab follows a structured protocol to safely restore full function.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/5794055/pexels-photo-5794055.jpeg?auto=compress&cs=tinysrgb&w=1200"  alt="Shoulder Therapy"><h4>Shoulder Problems</h4><p>Rotator cuff tears, frozen shoulder, and impingement syndrome frequently affect both active and sedentary individuals.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Shoulder rehabilitation requires careful scapular stabilisation, rotator cuff strengthening, and joint mobilisation. Early intervention prevents chronic stiffness and the need for surgical management.</div></div>
+      </div></div>
+    <div class="tab-panel" id="tab-exercises"><div class="k-grid">
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/7674488/pexels-photo-7674488.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Core Stabilisation"><h4>Core Stabilisation</h4><p>Deep abdominal and spinal exercises forming the foundation of injury prevention and back pain management.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Begin with diaphragmatic breathing and transverse abdominis activation. Progress to bird-dog, dead bug, and plank variations. Core stability underpins every movement pattern in daily life and sport.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="proprioception.png" alt="Balance and Proprioception"><h4>Balance &amp; Proprioception</h4><p>Exercises that retrain the nervous system's sense of body position — critical after any joint injury.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Single-leg stands, wobble board training, and perturbation exercises rebuild the neuromuscular control that protects joints from re-injury. Especially vital for ankles, knees, and post-surgical recovery.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/36715688/pexels-photo-36715688.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Stretching and Flexibility"><h4>Stretching &amp; Flexibility</h4><p>Static, dynamic, and PNF stretching techniques to restore full range of motion and prevent recurring injury.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Proprioceptive Neuromuscular Facilitation is one of the most effective stretching techniques, using the body's reflexes to achieve greater flexibility gains than passive stretching alone.</div></div>
+    </div></div>
+    <div class="tab-panel" id="tab-posture"><div class="k-grid">
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/31726673/pexels-photo-31726673.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Ergonomic Workspace"><h4>Ergonomic Workspace</h4><p>Desk, chair, monitor, and keyboard setup that supports spinal alignment during long work hours.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Monitor at eye level, elbows at 90 degrees, feet flat on the floor, and lumbar support engaged. Take a five-minute movement break every 45 minutes. These small changes prevent chronic pain and cumulative strain injuries.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/6633819/pexels-photo-6633819.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Sleep Posture"><h4>Sleep Posture</h4><p>Sleeping position significantly impacts spinal health, neck pain, and overall recovery from injuries.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Side-lying with a pillow between the knees reduces spinal load. Back sleeping with a pillow under the knees supports the lumbar curve. Avoid stomach sleeping — it increases neck rotation and lumbar compression during rest.</div></div>
+      <div class="k-card" onclick="toggleKCard(this)"><img src="https://images.pexels.com/photos/8851929/pexels-photo-8851929.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Healthy Nutrition"><h4>Hydration &amp; Nutrition</h4><p>Optimal tissue healing requires adequate hydration, protein intake, and anti-inflammatory dietary choices.</p><span class="k-card-toggle">Read more</span><div class="k-card-more">Collagen synthesis requires Vitamin C. Omega-3 fatty acids reduce systemic inflammation. Adequate protein supports muscle repair. Dehydration reduces intervertebral disc height and joint lubrication quality.</div></div>
+     </div></div>
+  </div>
+</section>
+
+<section class="services section-pad" id="services">
+  <div class="container">
+    <div class="center" style="margin-bottom:3rem">
+      <h2 class="section-title">Our Specialisations</h2>
+      <p class="section-intro">Comprehensive physiotherapy services delivered by certified specialists with a patient first approach.</p>
+      <h3 class="section-title">Drag &amp; Spin the Wheel !</h3>
+    </div>
+    <div class="spec-explorer">
+
+      <div class="spec-wheel-wrap">
+        <canvas class="spec-particles" id="specParticles"></canvas>
+        <div class="spec-wheel" id="specWheel">
+          <div class="spec-wheel-ring" id="specRing">
+      
+          </div>
+          <div class="spec-center-glow" id="specGlow">
+            <div class="spec-center-inner">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="7" stroke-width="2.5"/>
+                <line x1="20" y1="4" x2="20" y2="12"/>
+                <line x1="20" y1="28" x2="20" y2="36"/>
+                <line x1="4" y1="20" x2="12" y2="20"/>
+                <line x1="28" y1="20" x2="36" y2="20"/>
+              </svg>
+              <span>Explore</span>
+            </div>
+          </div>
+        </div>
+        <p class="spec-drag-hint">Drag to spin · Click to explore</p>
+      </div>
+      <div class="spec-panel" id="specPanel">
+        <div class="spec-panel-eyebrow" id="specEyebrow">Specialisation</div>
+        <h3 class="spec-panel-title" id="specTitle">Select a Specialisation</h3>
+        <p class="spec-panel-desc" id="specDesc">Drag the wheel or click any specialisation node to explore our expert physiotherapy services in detail.</p>
+        <ul class="spec-panel-features" id="specFeatures"></ul>
+        <div class="spec-panel-cta" id="specCta" style="opacity:0;pointer-events:none">
+          <button class="btn btn-primary btn-sm" onclick="openBooking()">Book a Consultation</button>
+        </div>
+        <div class="spec-panel-bg-number" id="specBgNumber">01</div>
+      </div>
+    </div>
+  
+    <div class="spec-mobile-tabs" id="specMobileTabs"></div>
+  </div>
+</section>
+
+<section class="founder section-pad" id="founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-photo-col">
+        <div class="founder-photo-wrap">
+          <img src="founder_pic.jpeg" alt="Dr. Janhavi Parpattedar" class="founder-photo">
+        </div>
+      </div>
+      <div class="founder-content">
+        <h2 class="section-title founder-name">Dr. Janhavi Parpattedar</h2>
+        <p class="founder-title-tag">Chief Physiotherapist &amp; Founder, NIRANTAR</p>
+        <p class="founder-bio">With a strong academic foundation in physiotherapy and hands-on clinical experience across orthopaedic, neurological, and sports rehabilitation, I believe that true healing comes from understanding each patient as a whole — not just their symptoms.</p>
+        <p class="founder-bio">At NIRANTAR, the focus is on combining evidence-based physiotherapy with compassionate care. Every treatment plan is tailored to the individual's lifestyle, goals, and condition, ensuring sustainable recovery and long-term well-being.</p>
+         <p class="founder-title-tag">Contact : <a href="tel:+918657693396">+91 86576 93396</a></p>
+        <div class="founder-cards">
+
+          <div class="founder-card">
+            <h3 class="card-title">Certifications</h3>
+            <ul class="card-list">
+              <li>Certified Ergonomics Physiotherapist</li>
+              <li>COMT – Certified Orthopedic Manual Therapy</li>
+              <li>Certified Dry Needling Therapy (CDNT)</li>
+              <li>Certified Instrument Assisted Soft Tissue Mobilization</li>
+              <li>Certified Diversified Cupping Therapy (CDCT)</li>
+              <li>Certified Sports Taping Therapy (CSTT)</li>
+            </ul>
+          </div>
+          <div class="founder-card">
+            <h3 class="card-title">Clinical Skills</h3>
+            <ul class="card-list">
+              <li>Manual Therapy &amp; Myofascial Release</li>
+              <li>Stretching &amp; Flexibility Techniques</li>
+              <li>Neurological Rehabilitation Techniques</li>
+              <li>Electrotherapy Modalities</li>
+              <li>Gait &amp; Postural Assessment</li>
+              <li>Exercise Prescription</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews section-pad-sm" id="reviews">
+  <div class="reviews-head container">
+    <span class="eyebrow">Patient Stories</span>
+    <h2 class="section-title">What Our Patients Say</h2>
+  </div>
+  <div class="conveyor-wrap">
+    <div class="conveyor-fade-l"></div><div class="conveyor-fade-r"></div>
+    <div class="conveyor-track" id="conveyor-track"></div>
+  </div>
+</section>
+
+<section class="cta-banner" id="cta">
+  <h2>Start Your Recovery Today</h2>
+  <p>Every day without care is a day further from the life you deserve. Take the first step — our team is ready to help.</p>
+  <button class="btn btn-white btn-lg" onclick="openBooking()">Book Your Appointment</button>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">NIRANTAR</div>
+        <div class="footer-brand-sub">Physiotherapy</div>
+        <p class="footer-desc">Continuous care for a pain-free life. Evidence-based physiotherapy delivered with compassion, precision, and purpose.</p>
+        <div class="footer-socials">
+          <a class="footer-social" href="https://www.instagram.com/nirantarphysio?utm_source=qr&igsh=Y2F6Y2xyM3lmcWY0" target="_blank"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Services</h5><a href="#services">Orthopaedic Physio</a><a href="#services">Neurological Rehab</a><a href="#services">Sports Injury</a><a href="#services">Post-Surgery Care</a><a href="#services">Pain Management</a></div>
+      <div class="footer-col"><h5>Learn</h5><a href="#knowledge">What is Physiotherapy?</a><a href="#knowledge">Types of Therapy</a><a href="#knowledge">Common Injuries</a><a href="#knowledge">Exercise Library</a><a href="#knowledge">Posture Tips</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="#">Mumbai, Maharashtra</a><a href="tel:+918657693396">+91 86576 93396</a><a href="mailto:nirantarphysio@gmail.com">nirantarphysio@gmail.com</a><a href="#">Mon – Sat, 8 am – 7 pm</a></div>
+    </div>
+    <div class="footer-bottom">© 2025 NIRANTAR Physiotherapy. All rights reserved.</div>
+  </div>
+</footer>
+</div>
+<div id="page-dashboard" class="hidden recovery-dashboard">
+
+  <aside class="recovery-sidebar">
+    <div class="sidebar-brand">
+      <h2>NIRANTAR</h2>
+      <p>Patient Recovery Portal</p>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="side-link active" data-tab="overview">
+        Overview
+      </button>
+      <button class="side-link" data-tab="profile">
+        Profile
+      </button>
+      <button class="side-link" data-tab="appointments">
+        Appointments
+      </button>
+      <button class="side-link" data-tab="exercises">
+        My Exercises
+      </button>
+      <button class="side-link" data-tab="recovery">
+        Recovery Plan
+      </button>
+      <button class="side-link" data-tab="messages">
+        Therapist Messages
+        <span class="side-link-badge hidden" id="msg-badge">0</span>
+      </button>
+      <button class="side-link" data-tab="journal">
+        Pain Journal
+      </button>
+      <button class="side-link" data-tab="progress">
+        Progress
+      </button>
+      <button class="side-link" data-tab="wellness">
+        Daily Wellness
+      </button>
+      <button class="side-link" data-tab="notifications">
+        Notifications
+        <span class="side-link-badge hidden" id="notif-count">0</span>
+      </button>
+    </nav>
+    <div class="sidebar-bottom-bar">
+      <div class="sidebar-user-info">
+        <div class="sidebar-avatar" id="sidebar-avatar">P</div>
+        <div>
+          <div class="sidebar-user-name" id="sidebar-name">Patient</div>
+          <div class="sidebar-user-email" id="sidebar-email"></div>
+        </div>
+      </div>
+      <button class="btn btn-outline btn-sm btn-full" onclick="logout()" style="margin-top:10px">Log Out</button>
+    </div>
+  </aside>
+
+  <main class="recovery-main">
+
+    <section class="recovery-hero">
+      <div>
+        <h1 id="dash-name">Welcome back</h1>
+        <p>Your recovery journey continues today — keep going.</p>
+      </div>
+      <button class="btn btn-white" onclick="openBooking()">Book Appointment</button>
+    </section>
+
+    <section class="recovery-stats">
+      <div class="recovery-stat-card">
+        <h3 id="recovery-score">—</h3>
+        <p>Recovery Score</p>
+      </div>
+      <div class="recovery-stat-card">
+        <h3 id="exercise-count">0</h3>
+        <p>Exercises Done Today</p>
+      </div>
+      <div class="recovery-stat-card">
+        <h3 id="streak-count">0 Days</h3>
+        <p>Journal Streak</p>
+      </div>
+      <div class="recovery-stat-card">
+        <h3 id="pain-score">—</h3>
+        <p>Latest Pain Level</p>
+      </div>
+      <div class="recovery-stat-card">
+        <h3 id="stat-upcoming">0</h3>
+        <p>Upcoming Sessions</p>
+      </div>
+    </section>
+    <section class="dashboard-tab" id="profile-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">Patient Details</span>
+          <h2>Profile</h2>
+        </div>
+        <span class="profile-sync-note">Synced with admin records</span>
+      </div>
+
+      <div class="profile-panel">
+        <div class="profile-summary-card">
+          <div class="profile-avatar-large" id="profile-avatar">P</div>
+          <h3 id="profile-display-name">Patient</h3>
+          <p id="profile-display-email"></p>
+          <div class="profile-summary-grid">
+            <div><span>BMI</span><strong id="profile-summary-bmi">-</strong></div>
+            <div><span>Age</span><strong id="profile-summary-age">-</strong></div>
+            <div><span>Activity</span><strong id="profile-summary-activity">-</strong></div>
+          </div>
+        </div>
+
+        <form class="profile-edit-card" onsubmit="saveDashboardProfile(event)">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input class="form-input" type="text" id="profile-name" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input class="form-input" type="email" id="profile-email" disabled>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input class="form-input" type="tel" id="profile-phone" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Gender</label>
+              <select class="form-select" id="profile-gender">
+                <option value="">Select gender</option>
+                <option>Male</option><option>Female</option><option>Non-binary</option><option>Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row-3">
+            <div class="form-group">
+              <label class="form-label">Age</label>
+              <input class="form-input" type="number" id="profile-age" min="1" max="120">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Height (cm)</label>
+              <input class="form-input" type="number" id="profile-height" min="50" max="300">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Weight (kg)</label>
+              <input class="form-input" type="number" id="profile-weight" min="10" max="500" step="0.1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Activity Level</label>
+            <select class="form-select" id="profile-activity">
+              <option value="">Select your activity level</option>
+              <option>Sedentary (desk job, minimal movement)</option>
+              <option>Lightly Active (occasional walks)</option>
+              <option>Moderately Active (regular exercise 2-3x/week)</option>
+              <option>Very Active (daily exercise or physical work)</option>
+              <option>Athlete (competitive training)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Medical History</label>
+            <textarea class="form-textarea" id="profile-history" rows="3" placeholder="Previous injuries, surgeries, chronic conditions"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pain Areas</label>
+            <div id="profile-chip-wrap" class="profile-chip-wrap">
+              <span class="chip" onclick="toggleChip(this)">Neck</span>
+              <span class="chip" onclick="toggleChip(this)">Shoulder</span>
+              <span class="chip" onclick="toggleChip(this)">Upper Back</span>
+              <span class="chip" onclick="toggleChip(this)">Lower Back</span>
+              <span class="chip" onclick="toggleChip(this)">Hip</span>
+              <span class="chip" onclick="toggleChip(this)">Knee</span>
+              <span class="chip" onclick="toggleChip(this)">Ankle</span>
+              <span class="chip" onclick="toggleChip(this)">Wrist</span>
+              <span class="chip" onclick="toggleChip(this)">Elbow</span>
+              <span class="chip" onclick="toggleChip(this)">Foot</span>
+              <span class="chip" onclick="toggleChip(this)">Headaches</span>
+              <span class="chip" onclick="toggleChip(this)">Whole Body</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="btn-profile-update" type="submit">Save Profile Changes</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="dashboard-tab active" id="overview-tab">
+      <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+          <div class="card-head">
+            <h2>Message From Your Therapist</h2>
+          </div>
+          <div class="therapist-message-box">
+            <div id="latest-therapist-message">
+              <p style="color:var(--text-muted);font-style:italic">Loading…</p>
+            </div>
+          </div>
+          <button class="btn btn-ghost btn-sm" style="margin-top:14px" onclick="switchDashTab('messages')">View All Messages</button>
+        </div>
+        <div class="dashboard-card">
+          <div class="card-head"><h2>Upcoming Appointment</h2></div>
+          <div id="upcoming-appointment">
+            <p class="empty-msg">Loading…</p>
+          </div>
+          <button class="btn btn-ghost btn-sm" style="margin-top:14px" onclick="openBooking()">+ Book New Session</button>
+        </div>
+        <div class="dashboard-card">
+          <div class="card-head"><h2>Recovery Progress</h2></div>
+          <div id="overview-recovery-snapshot">
+            <p class="empty-msg">Loading recovery plan…</p>
+          </div>
+          <button class="btn btn-ghost btn-sm" style="margin-top:14px" onclick="switchDashTab('recovery')">View Full Plan</button>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-head"><h2>Daily Wellness</h2></div>
+          <div class="wellness-grid" style="grid-template-columns:1fr 1fr;gap:10px">
+            <div class="wellness-item" onclick="switchDashTab('wellness')" style="cursor:pointer">Hydration</div>
+            <div class="wellness-item" onclick="switchDashTab('wellness')" style="cursor:pointer">Sleep Quality</div>
+            <div class="wellness-item" onclick="switchDashTab('journal')" style="cursor:pointer">Pain Journal</div>
+            <div class="wellness-item" onclick="switchDashTab('exercises')" style="cursor:pointer">Exercises</div>
+          </div>
+          <button class="btn btn-ghost btn-sm" style="margin-top:14px" onclick="switchDashTab('wellness')">Log Today's Wellness</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="dashboard-tab" id="recovery-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">Personalised for You</span>
+          <h2>Your Recovery Plan</h2>
+        </div>
+      </div>
+      <div id="recovery-plan-container">
+        <p class="empty-msg">Loading…</p>
+      </div>
+    </section>
+
+    <section class="dashboard-tab" id="exercises-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">Assigned by Your Therapist</span>
+          <h2>My Exercises</h2>
+        </div>
+      </div>
+      <div class="exercise-grid" id="exercise-container">
+        <p class="empty-msg">Loading exercises…</p>
+      </div>
+    </section>
+
+    <section class="dashboard-tab" id="messages-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">From Dr. Janhavi</span>
+          <h2>Therapist Messages</h2>
+        </div>
+      </div>
+      <div id="messages-container">
+        <p class="empty-msg">Loading messages…</p>
+      </div>
+    </section>
+
+    <section class="dashboard-tab" id="journal-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">Daily Check-in</span>
+          <h2>Pain Journal</h2>
+        </div>
+      </div>
+
+      <div class="journal-form-card">
+        <div class="journal-form-title">How are you feeling today?</div>
+
+        <div class="journal-slider-group">
+          <div class="journal-slider-label">
+            <span>Pain Level</span>
+            <span class="journal-slider-val" id="journal-pain-val">0</span>
+          </div>
+          <input type="range" class="journal-slider" id="journal-pain" min="0" max="10" value="0">
+          <div style="display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-light);margin-top:4px"><span>No pain</span><span>Severe</span></div>
+        </div>
+
+        <div class="journal-slider-group">
+          <div class="journal-slider-label">
+            <span>Stiffness</span>
+            <span class="journal-slider-val" id="journal-stiffness-val">0</span>
+          </div>
+          <input type="range" class="journal-slider" id="journal-stiffness" min="0" max="10" value="0">
+        </div>
+
+        <div class="journal-slider-group">
+          <div class="journal-slider-label">
+            <span>Sleep Quality (last night)</span>
+            <span class="journal-slider-val" id="journal-sleep-val">5</span>
+          </div>
+          <input type="range" class="journal-slider" id="journal-sleep" min="1" max="10" value="5">
+          <div style="display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-light);margin-top:4px"><span>Very poor</span><span>Excellent</span></div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:16px">
+          <label style="font-size:0.76rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-muted);display:block;margin-bottom:8px">Mood Today</label>
+          <select id="journal-mood" class="form-select" style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--r-md);font-family:var(--font-body);font-size:0.9rem;color:var(--text);background:var(--bg)">
+            <option value="great">Great</option>
+            <option value="good">Good</option>
+            <option value="okay" selected>Okay</option>
+            <option value="bad">Bad</option>
+            <option value="terrible">Terrible</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom:16px">
+          <label style="font-size:0.76rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-muted);display:block;margin-bottom:10px">Pain Areas (tap to select)</label>
+          <div id="journal-pain-areas" style="display:flex;flex-wrap:wrap;gap:8px">
+            <span class="chip" onclick="toggleChip(this)">Neck</span>
+            <span class="chip" onclick="toggleChip(this)">Shoulder</span>
+            <span class="chip" onclick="toggleChip(this)">Upper Back</span>
+            <span class="chip" onclick="toggleChip(this)">Lower Back</span>
+            <span class="chip" onclick="toggleChip(this)">Hip</span>
+            <span class="chip" onclick="toggleChip(this)">Knee</span>
+            <span class="chip" onclick="toggleChip(this)">Ankle</span>
+            <span class="chip" onclick="toggleChip(this)">Wrist</span>
+            <span class="chip" onclick="toggleChip(this)">Elbow</span>
+            <span class="chip" onclick="toggleChip(this)">Foot</span>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:20px">
+          <label style="font-size:0.76rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-muted);display:block;margin-bottom:8px">Notes (optional)</label>
+          <textarea id="journal-notes" rows="3" placeholder="Anything specific today? Describe pain triggers, activities, or how you feel…"
+            style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r-md);font-family:var(--font-body);font-size:0.88rem;resize:vertical;background:var(--bg);color:var(--text)"></textarea>
+        </div>
+
+        <button class="btn btn-primary" id="btn-journal-save" onclick="submitPainJournal()">Save Today's Entry</button>
+      </div>
+
+      <div class="section-title-row" style="margin-top:28px">
+        <h2 style="font-size:1.2rem">Previous Entries</h2>
+      </div>
+      <div id="pain-journal-entries">
+        <p class="empty-msg">No entries yet.</p>
+      </div>
+    </section>
+    <section class="dashboard-tab" id="progress-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">Your Healing Journey</span>
+          <h2>Progress Tracker</h2>
+        </div>
+      </div>
+      <div id="progress-charts">
+        <p class="empty-msg">Loading progress data…</p>
+      </div>
+    </section>
+
+    <section class="dashboard-tab" id="wellness-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">Today's Goals</span>
+          <h2>Daily Wellness</h2>
+        </div>
+      </div>
+
+      <div class="wellness-panel-card">
+        <div class="wellness-panel-title">Daily Recovery Checklist</div>
+
+        <div class="wellness-progress-wrap" style="margin-bottom:20px">
+          <div class="wellness-progress-label" id="wellness-progress-label">0% of daily wellness goals completed</div>
+          <div class="wellness-progress-track"><div class="wellness-progress-bar" id="wellness-progress-bar"></div></div>
+        </div>
+
+        <div class="wellness-water-row">
+          <div class="wellness-check-label">
+            Water Intake
+            <div class="wellness-check-desc">Target: 8 glasses per day</div>
+          </div>
+          <input type="number" id="wellness-water" class="wellness-water-input" min="0" max="20" value="0" placeholder="0">
+          <span style="font-size:0.8rem;color:var(--text-muted)">glasses</span>
+        </div>
+
+        <div class="wellness-check-item">
+          <input type="checkbox" id="wellness-posture">
+          <div class="wellness-check-label">
+            Posture Check Done
+            <div class="wellness-check-desc">Sat upright and corrected posture during work</div>
+          </div>
+        </div>
+
+        <div class="wellness-check-item">
+          <input type="checkbox" id="wellness-stretch">
+          <div class="wellness-check-label">
+            Stretching Completed
+            <div class="wellness-check-desc">Completed assigned stretching routine</div>
+          </div>
+        </div>
+
+        <div class="wellness-check-item">
+          <input type="checkbox" id="wellness-breathe">
+          <div class="wellness-check-label">
+            Breathing Exercise Done
+            <div class="wellness-check-desc">5 minutes of diaphragmatic breathing</div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" style="margin-top:20px;width:100%" onclick="saveWellnessLog()">Save Today's Wellness Log</button>
+      </div>
+
+      <div class="dashboard-card" style="margin-top:16px;background:linear-gradient(135deg,var(--teal-xpale),var(--bg-white))">
+        <p style="font-family:var(--font-head);font-size:1.15rem;font-style:italic;color:var(--teal);line-height:1.7">
+          "Every step forward, no matter how small, is progress. Your body is healing — trust the process."
+        </p>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:12px">— Dr. Janhavi Parpattedar, NIRANTAR</p>
+      </div>
+    </section>
+
+    <section class="dashboard-tab" id="appointments-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">Your Sessions</span>
+          <h2>Appointments</h2>
+        </div>
+        <button class="btn btn-primary" onclick="openBooking()">+ Book New</button>
+      </div>
+      <div id="appt-list">
+        <p class="empty-msg">Loading appointments…</p>
+      </div>
+    </section>
+
+    <section class="dashboard-tab" id="notifications-tab">
+      <div class="section-title-row">
+        <div>
+          <span class="section-eyebrow">Updates from NIRANTAR</span>
+          <h2>Notifications</h2>
+        </div>
+      </div>
+      <div id="notifications-list">
+        <p class="empty-msg">Loading…</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+<div class="overlay hidden" id="overlay">
+
+  <div class="modal hidden" id="modal-login">
+    <div class="modal-header"><h2>Welcome Back</h2><p>Sign in to your NIRANTAR account</p></div>
+    <button class="btn-google" id="btn-google-login" onclick="signInWithGoogle('btn-google-login')" type="button">
+      <span class="google-mark">G</span>
+      Continue with Google
+    </button>
+    <div class="divider">or sign in with email</div>
+    <div class="form-group"><label class="form-label">Email Address</label>
+      <input class="form-input" type="email" id="login-email" placeholder="you@example.com" autocomplete="email"></div>
+    <div class="form-group"><label class="form-label">Password</label>
+      <div class="pwd-field-wrap">
+        <input class="form-input" type="password" id="login-pwd" placeholder="Your password" autocomplete="current-password">
+        <button type="button" class="show-pwd-btn" onclick="togglePwd('login-pwd',this)" aria-label="Show password">
+          <svg class="eye-icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" id="btn-login" onclick="loginUser()">Sign In</button>
+    <p class="modal-switch">Don't have an account? <button onclick="switchToSignup()">Sign Up</button></p>
+  </div>
+
+  <div class="modal hidden" id="modal-signup">
+    <div class="modal-header"><h2>Create Account</h2><p>Begin your recovery journey with NIRANTAR</p></div>
+    <button class="btn-google" id="btn-google-signup" onclick="signInWithGoogle('btn-google-signup')" type="button">
+      <span class="google-mark">G</span>
+      Continue with Google
+    </button>
+    <div class="divider">or create account with email</div>
+    <div class="form-group"><label class="form-label">Full Name</label>
+      <input class="form-input" type="text" id="signup-name" placeholder="Your full name" autocomplete="name"></div>
+    <div class="form-group"><label class="form-label">Email Address</label>
+      <input class="form-input" type="email" id="signup-email" placeholder="you@example.com" autocomplete="email"></div>
+    <div class="form-group"><label class="form-label">Password</label>
+      <div class="pwd-field-wrap">
+        <input class="form-input" type="password" id="signup-pwd" placeholder="Min 8 characters" autocomplete="new-password">
+        <button type="button" class="show-pwd-btn" onclick="togglePwd('signup-pwd',this)" aria-label="Show password">
+          <svg class="eye-icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+      <div class="pwd-strength-wrap"><div class="pwd-strength-track"><div id="pwd-strength-bar"></div></div><span id="pwd-strength-label"></span></div>
+    </div>
+    <div class="form-group"><label class="form-label">Confirm Password</label>
+      <div class="pwd-field-wrap">
+        <input class="form-input" type="password" id="signup-confirm" placeholder="Re-enter password" autocomplete="new-password">
+        <button type="button" class="show-pwd-btn" onclick="togglePwd('signup-confirm',this)" aria-label="Show password">
+          <svg class="eye-icon" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" id="btn-signup" onclick="signupUser()">Create Account</button>
+    <p class="modal-switch">Already have an account? <button onclick="switchToLogin()">Log In</button></p>
+  </div>
+
+  <div class="modal modal-profile hidden" id="modal-profile1">
+    <div class="modal-header">
+      <h2>Complete Your Health Profile</h2>
+      <p>Step 1 of 2 — Your physical details help us personalise your care</p>
+      <div class="profile-steps"><div class="profile-step active">1</div><div class="profile-step-line"></div><div class="profile-step">2</div></div>
+    </div>
+    <div class="form-row-2">
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input class="form-input" type="tel" id="p-phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Gender</label>
+        <select class="form-select" id="p-gender">
+          <option value="">Select gender</option>
+          <option>Male</option><option>Female</option><option>Non-binary</option><option>Prefer not to say</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row-2">
+      <div class="form-group">
+        <label class="form-label">Age</label>
+        <input class="form-input" type="number" id="p-age" placeholder="Your age" min="1" max="120">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Height (cm)</label>
+        <input class="form-input" type="number" id="p-height" placeholder="e.g. 165" min="50" max="300">
+      </div>
+    </div>
+    <div class="form-row-2">
+      <div class="form-group">
+        <label class="form-label">Weight (kg)</label>
+        <input class="form-input" type="number" id="p-weight" placeholder="e.g. 65" min="10" max="500" step="0.1">
+      </div>
+      <div class="form-group">
+        <label class="form-label">BMI</label>
+        <div style="background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r-md);padding:10px 14px;min-height:44px">
+          <span id="bmi-number" style="font-family:var(--font-head);font-size:1.2rem;font-weight:700">—</span>
+          <div id="bmi-label" style="font-size:0.72rem;color:var(--text-muted);margin-top:2px">Enter height and weight above</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="goToProfile2()">Continue</button>
+  </div>
+  <div class="modal modal-profile hidden" id="modal-profile2">
+    <div class="modal-header">
+      <h2>A Little More About You</h2>
+      <p>Step 2 of 2 — This helps your therapist understand your needs</p>
+      <div class="profile-steps"><div class="profile-step">1</div><div class="profile-step-line active"></div><div class="profile-step active">2</div></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Activity Level</label>
+      <select class="form-select" id="p-activity">
+        <option value="">Select your activity level</option>
+        <option>Sedentary (desk job, minimal movement)</option>
+        <option>Lightly Active (occasional walks)</option>
+        <option>Moderately Active (regular exercise 2–3×/week)</option>
+        <option>Very Active (daily exercise or physical work)</option>
+        <option>Athlete (competitive training)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Medical History (optional)</label>
+      <textarea class="form-textarea" id="p-history" rows="3" placeholder="Previous injuries, surgeries, chronic conditions…"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Pain Areas (select all that apply)</label>
+      <div id="chip-wrap" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+        <span class="chip" onclick="toggleChip(this)">Neck</span>
+        <span class="chip" onclick="toggleChip(this)">Shoulder</span>
+        <span class="chip" onclick="toggleChip(this)">Upper Back</span>
+        <span class="chip" onclick="toggleChip(this)">Lower Back</span>
+        <span class="chip" onclick="toggleChip(this)">Hip</span>
+        <span class="chip" onclick="toggleChip(this)">Knee</span>
+        <span class="chip" onclick="toggleChip(this)">Ankle</span>
+        <span class="chip" onclick="toggleChip(this)">Wrist</span>
+        <span class="chip" onclick="toggleChip(this)">Elbow</span>
+        <span class="chip" onclick="toggleChip(this)">Foot</span>
+        <span class="chip" onclick="toggleChip(this)">Headaches</span>
+        <span class="chip" onclick="toggleChip(this)">Whole Body</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:8px">
+      <button class="btn btn-outline" onclick="backToProfile1()">Back</button>
+      <button class="btn btn-primary btn-full" id="btn-save-profile" onclick="saveProfile()">Complete Setup</button>
+    </div>
+  </div>
+
+  <div class="modal modal-booking hidden" id="modal-booking">
+    <div class="modal-header"><h2>Book an Appointment</h2><p>Fill in your details and we'll confirm your session shortly.</p></div>
+    <div class="form-group"><label class="form-label">Main Problem / Complaint *</label>
+      <textarea class="form-textarea" id="b-problem" rows="2" placeholder="Describe your main concern in detail (min 10 characters)"></textarea></div>
+    <div class="form-group"><label class="form-label">Symptoms</label>
+      <input class="form-input" type="text" id="b-symptoms" placeholder="e.g. Sharp pain, numbness, stiffness, swelling"></div>
+    <div class="form-row-2">
+      <div class="form-group"><label class="form-label">Pain Duration</label>
+        <input class="form-input" type="text" id="b-duration" placeholder="e.g. 2 weeks, 3 months"></div>
+      <div class="form-group"><label class="form-label">Previous Treatments</label>
+        <input class="form-input" type="text" id="b-prev" placeholder="e.g. Painkillers, rest"></div>
+    </div>
+    <div class="form-group"><label class="form-label">Pain Intensity: <strong id="pain-value">5</strong>/10</label>
+      <input type="range" id="pain-slider" min="1" max="10" value="5" oninput="updatePainSlider()"
+        style="width:100%;height:6px;border-radius:4px;accent-color:var(--teal);cursor:pointer;margin-top:6px"></div>
+    <div class="form-row-2">
+      <div class="form-group"><label class="form-label">Preferred Date *</label>
+        <input class="form-input" type="date" id="b-date"></div>
+      <div class="form-group"><label class="form-label">Preferred Time</label>
+        <select class="form-select" id="b-time">
+          <option value="">Any time</option>
+          <option>8:00 AM</option><option>9:00 AM</option><option>10:00 AM</option>
+          <option>11:00 AM</option><option>12:00 PM</option><option>2:00 PM</option>
+          <option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group"><label class="form-label">Session Type</label>
+      <div style="display:flex;gap:10px;margin-top:4px">
+        <button class="mode-option active" onclick="selectMode(this)" style="flex:1;padding:10px;border-radius:var(--r-md);border:1.5px solid var(--teal);background:var(--teal-pale);color:var(--teal);font-weight:500;font-size:0.88rem;cursor:pointer">In-Person</button>
+        <button class="mode-option" onclick="selectMode(this)" style="flex:1;padding:10px;border-radius:var(--r-md);border:1.5px solid var(--border);background:var(--bg);color:var(--text-mid);font-weight:500;font-size:0.88rem;cursor:pointer">Online</button>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" id="btn-book-submit" onclick="submitBooking()">Submit Booking Request</button>
+    <p style="font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:12px">We'll confirm within 24 hours via call or message.</p>
+  </div>
+
+  <div class="modal modal-sm hidden" id="modal-confirm">
+    <div style="text-align:center;padding:12px 0">
+      <div style="width:64px;height:64px;background:var(--teal-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="var(--teal)" fill="none" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <h2 style="font-size:1.6rem;margin-bottom:8px">Booking Received!</h2>
+      <p style="color:var(--text-muted);margin-bottom:8px">Reference: <strong id="confirm-ref"></strong></p>
+      <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:24px">We'll confirm your appointment within 24 hours. You'll receive a call or message from the clinic.</p>
+      <button class="btn btn-primary btn-full" onclick="goToDashboard()">Go to My Dashboard</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+// togglePwd — inline since it's UI-only
+function togglePwd(inputId, btn) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  const show = input.type === 'password';
+  input.type = show ? 'text' : 'password';
+  const icon = btn.querySelector('.eye-icon');
+  if (icon) icon.setAttribute('stroke-opacity', show ? '0.4' : '1');
+}
+</script>
+<script>
+const slides = document.querySelectorAll('.slide');
+
+let currentSlide = 0;
+
+function changeSlide(){
+
+  slides.forEach(slide=>{
+    slide.classList.remove('active');
+  });
+
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  slides[currentSlide].classList.add('active');
+}
+
+slides[0].classList.add('active');
+
+setInterval(changeSlide, 3500);
+</script>
+
+<script>
+(function () {
+  'use strict';
+  var SPECS = [
+    {
+      label: 'Orthopaedic',
+      eyebrow: 'Musculoskeletal Care', number: '01',
+      title: 'Orthopaedic Physiotherapy',
+      desc: 'Expert rehabilitation for musculoskeletal conditions — from acute fractures and chronic arthritis to joint replacements and degenerative disc disease. We use targeted manual therapy, progressive loading, and evidence-based protocols to restore strength, mobility, and quality of life.',
+      features: ['Joint replacement rehab', 'Fracture recovery', 'Arthritis management', 'Manual therapy & mobilisation']
+    },
+    {
+      label: 'Neuro Rehab',
+      eyebrow: 'Neurological Recovery', number: '02',
+      title: 'Neurological Rehabilitation',
+      desc: 'Specialised care for individuals living with neurological conditions. Our therapists work with stroke survivors, Parkinson patients, and those with multiple sclerosis or spinal cord injuries — harnessing neuroplasticity to maximise functional recovery and independence.',
+      features: ['Stroke & hemiplegia rehab', 'Parkinson mobility', 'Gait retraining', 'Spinal cord injury care']
+    },
+    {
+      label: 'Sports Rehab',
+      eyebrow: 'Athletic Recovery', number: '03',
+      title: 'Sports Injury Rehabilitation',
+      desc: 'Return-to-sport programmes built for athletes at every level. Whether dealing with an acute injury, overuse syndrome, or performance plateau, our sports physios design structured progressions that get you back stronger — and help you stay there.',
+      features: ['ACL & knee rehabilitation', 'Shoulder & rotator cuff', 'Running injury management', 'Performance optimisation']
+    },
+    {
+      label: 'Pain Care',
+      eyebrow: 'Chronic Pain', number: '04',
+      title: 'Chronic Pain Management',
+      desc: 'Multidisciplinary approaches for persistent and complex pain conditions. We combine manual therapy, therapeutic exercise, pain-science education, and lifestyle coaching to help you understand your pain, reduce its impact, and reclaim an active life.',
+      features: ['Fibromyalgia & CRPS', 'Chronic back & neck pain', 'Pain-neuroscience education', 'Graded activity programmes']
+    },
+    {
+      label: "Women's Health",
+      eyebrow: "Women's Wellness", number: '05',
+      title: "Women's Health Physiotherapy",
+      desc: 'Compassionate, evidence-based physiotherapy addressing the full spectrum of women musculoskeletal and pelvic health. From prenatal aches to post-natal recovery and pelvic floor rehabilitation, we provide a safe, respectful space for every stage of life.',
+      features: ['Pelvic floor rehabilitation', 'Pre & post-natal care', 'Diastasis recti treatment', 'Urinary incontinence']
+    },
+    {
+      label: 'Post Surgery',
+      eyebrow: 'Surgical Recovery', number: '06',
+      title: 'Post-Surgery Recovery',
+      desc: 'Structured, stage-by-stage rehabilitation following orthopaedic and spinal surgeries. Our post-surgical protocols are developed in collaboration with referring surgeons to ensure safe timelines, optimal healing, and the best possible functional outcome.',
+      features: ['Joint replacement recovery', 'ACL reconstruction rehab', 'Spinal surgery follow-up', 'Scar tissue management']
+    }
+  ];
+
+  var N = SPECS.length;
+
+  var wheelEl    = document.getElementById('specWheel');
+  var ringEl     = document.getElementById('specRing');
+  var glowEl     = document.getElementById('specGlow');
+  var panelEl    = document.getElementById('specPanel');
+  var eyebrowEl  = document.getElementById('specEyebrow');
+  var titleEl    = document.getElementById('specTitle');
+  var descEl     = document.getElementById('specDesc');
+  var featEl     = document.getElementById('specFeatures');
+  var ctaEl      = document.getElementById('specCta');
+  var bgNumEl    = document.getElementById('specBgNumber');
+  var mobileEl   = document.getElementById('specMobileTabs');
+
+  if (!wheelEl) return;
+
+  var rotation  = 0;    
+  var velocity  = 0;    
+  var dragging  = false;
+  var activeIdx = -1;
+  var prevA     = 0;    
+  var prevT     = 0;
+  var physRaf   = null;
+  var snapRaf   = null;
+
+  var baseAngles = [];  
+  var nodeEls    = [];
+
+  for (var i = 0; i < N; i++) {
+    baseAngles.push((360 / N) * i);   
+    var el = document.createElement('div');
+    el.className = 'spec-node';
+    el.setAttribute('data-idx', String(i));
+    el.innerHTML = '<span class="spec-node-label">' + SPECS[i].label + '</span>';
+    ringEl.appendChild(el);
+    nodeEls.push(el);
+  }
+
+  function positionNodes() {
+    var hw    = wheelEl.offsetWidth  / 2;
+    var hh    = wheelEl.offsetHeight / 2;
+    var orbit = hw * 0.78;
+    for (var i = 0; i < N; i++) {
+      var deg = baseAngles[i] + rotation;
+      var rad = deg * Math.PI / 180;
+      var px  = hw + orbit * Math.sin(rad);
+      var py  = hh - orbit * Math.cos(rad);
+      nodeEls[i].style.left      = px + 'px';
+      nodeEls[i].style.top       = py + 'px';
+      nodeEls[i].style.transform = 'translate(-50%, -50%)';
+    }
+  }
+
+  function selectSpec(idx) {
+    if (idx === activeIdx) return;
+    activeIdx = idx;
+    var s = SPECS[idx];
+
+    for (var i = 0; i < N; i++) {
+      nodeEls[i].classList.toggle('active', i === idx);
+    }
+    var tabs = mobileEl.querySelectorAll('.spec-mobile-tab');
+    for (var t = 0; t < tabs.length; t++) {
+      tabs[t].classList.toggle('active', t === idx);
+    }
+
+    eyebrowEl.textContent = s.eyebrow;
+    titleEl.textContent   = s.title;
+    descEl.textContent    = s.desc;
+    featEl.innerHTML      = s.features.map(function (f) {
+      return '<li>' + f + '</li>';
+    }).join('');
+    bgNumEl.textContent        = s.number;
+    ctaEl.style.opacity        = '1';
+    ctaEl.style.pointerEvents  = 'auto';
+    panelEl.classList.add('active');
+    glowEl.classList.add('lit');
+
+    var animated = panelEl.querySelectorAll(
+      '.spec-panel-eyebrow,.spec-panel-title,.spec-panel-desc,.spec-panel-features,.spec-panel-cta'
+    );
+    for (var a = 0; a < animated.length; a++) {
+      animated[a].classList.remove('spec-panel-anim');
+      void animated[a].offsetWidth; // force reflow
+      animated[a].classList.add('spec-panel-anim');
+    }
+  }
+  function nearestIdx() {
+    var step  = 360 / N;
+    var norm  = ((-rotation % 360) + 360) % 360;
+    return Math.round(norm / step) % N;
+  }
+
+  function snapToNearest() {
+    var idx    = nearestIdx();
+    var step   = 360 / N;
+    var target = -(idx * step);
+    var diff   = target - rotation;
+    while (diff >  180) diff -= 360;
+    while (diff < -180) diff += 360;
+    var dest  = rotation + diff;
+    var start = rotation;
+    var t0    = performance.now();
+    var dur   = 460;
+
+    if (snapRaf) cancelAnimationFrame(snapRaf);
+    (function tick(now) {
+      var progress = Math.min(1, (now - t0) / dur);
+      var ease     = 1 - Math.pow(1 - progress, 3);
+      rotation     = start + diff * ease;
+      positionNodes();
+      if (progress < 1) {
+        snapRaf = requestAnimationFrame(tick);
+      } else {
+        rotation = dest;
+        positionNodes();
+        selectSpec(idx);
+        snapRaf = null;
+      }
+    })(t0);
+  }
+
+  function physicsLoop() {
+    if (dragging) return;
+    if (Math.abs(velocity) > 0.06) {
+      rotation += velocity;
+      velocity *= 0.91;
+      positionNodes();
+      physRaf = requestAnimationFrame(physicsLoop);
+    } else {
+      velocity = 0;
+      physRaf  = null;
+      snapToNearest();
+    }
+  }
+
+  function getCenter() {
+    var r = wheelEl.getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+  }
+  function clientToAngle(cx, cy) {
+    var c = getCenter();
+    return Math.atan2(cy - c.y, cx - c.x) * 180 / Math.PI;
+  }
+
+  function onStart(cx, cy) {
+    dragging = true;
+    if (physRaf) { cancelAnimationFrame(physRaf); physRaf = null; }
+    if (snapRaf) { cancelAnimationFrame(snapRaf); snapRaf = null; }
+    velocity = 0;
+    prevA    = clientToAngle(cx, cy);
+    prevT    = performance.now();
+    wheelEl.style.cursor = 'grabbing';
+  }
+  function onMove(cx, cy) {
+    if (!dragging) return;
+    var now   = performance.now();
+    var curA  = clientToAngle(cx, cy);
+    var delta = curA - prevA;
+    /* wrap ±180 */
+    if (delta >  180) delta -= 360;
+    if (delta < -180) delta += 360;
+    var dt    = now - prevT || 1;
+    rotation += delta;
+    velocity  = (delta / dt) * 14;   /* scale to ~60fps frame */
+    positionNodes();
+    prevA = curA;
+    prevT = now;
+  }
+  function onEnd() {
+    if (!dragging) return;
+    dragging = false;
+    wheelEl.style.cursor = 'grab';
+    velocity = Math.max(-12, Math.min(12, velocity));
+    physRaf  = requestAnimationFrame(physicsLoop);
+  }
+
+  /* Mouse */
+  wheelEl.addEventListener('mousedown', function (e) {
+    e.preventDefault();
+    onStart(e.clientX, e.clientY);
+  });
+  document.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); });
+  document.addEventListener('mouseup',   onEnd);
+
+  wheelEl.addEventListener('touchstart', function (e) {
+    e.preventDefault();
+    onStart(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: false });
+  document.addEventListener('touchmove', function (e) {
+    if (!dragging) return;
+    onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  document.addEventListener('touchend', onEnd);
+
+  ringEl.addEventListener('click', function (e) {
+    if (Math.abs(velocity) > 1.5) return;  
+    var node = e.target.closest('.spec-node');
+    if (!node) return;
+    var idx   = parseInt(node.getAttribute('data-idx'), 10);
+    var step  = 360 / N;
+    var target = -(idx * step);
+    var diff   = target - rotation;
+    while (diff >  180) diff -= 360;
+    while (diff < -180) diff += 360;
+    var dest  = rotation + diff;
+    var start = rotation;
+    var t0    = performance.now();
+    var dur   = 460;
+    if (snapRaf) cancelAnimationFrame(snapRaf);
+    (function tick(now) {
+      var p  = Math.min(1, (now - t0) / dur);
+      var e2 = 1 - Math.pow(1 - p, 3);
+      rotation = start + diff * e2;
+      positionNodes();
+      if (p < 1) { snapRaf = requestAnimationFrame(tick); }
+      else { rotation = dest; positionNodes(); selectSpec(idx); snapRaf = null; }
+    })(t0);
+  });
+
+  /* ── MOBILE TABS ─────────────────────────────── */
+  for (var mi = 0; mi < N; mi++) {
+    (function (idx) {
+      var tab = document.createElement('button');
+      tab.className   = 'spec-mobile-tab';
+      tab.textContent = SPECS[idx].label;
+      tab.addEventListener('click', function () { selectSpec(idx); });
+      mobileEl.appendChild(tab);
+    })(mi);
+  }
+
+  positionNodes();
+
+  window.addEventListener('resize', positionNodes);
+
+  setTimeout(function () { selectSpec(0); }, 300);
+
+})();
+</script>
+</body>
+</html>
