@@ -1,4 +1,4 @@
- NIRANTAR — Physiotherapy Home Services : A physiotherapy home-visit booking website
+ *NIRANTAR — A physiotherapy home-visit booking website*
 
 Tech Stack : (HTML / CSS / JavaScript, Supabase — Auth + PostgreSQL database, Netlify — Static hosting)
 Features
