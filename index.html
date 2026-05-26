@@ -1198,7 +1198,6 @@ setInterval(changeSlide, 3500);
     physRaf  = requestAnimationFrame(physicsLoop);
   }
 
-  /* Mouse */
   wheelEl.addEventListener('mousedown', function (e) {
     e.preventDefault();
     onStart(e.clientX, e.clientY);
@@ -1241,7 +1240,6 @@ setInterval(changeSlide, 3500);
     })(t0);
   });
 
-  /* ── MOBILE TABS ─────────────────────────────── */
   for (var mi = 0; mi < N; mi++) {
     (function (idx) {
       var tab = document.createElement('button');
